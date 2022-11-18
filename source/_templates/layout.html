@@ -1,0 +1,17 @@
+{% extends "!layout.html" %}
+
+  {%- block extrahead %} 
+  <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+  <script type='text/javascript' src='https://api.altmetric.com/javascript/components/golden-kestrel/golden-kestrel.js'></script>
+  {% endblock %}
+
+  {% block footer %} {{ super() }}
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #1a3d74;
+    }
+  </style>
+  <script>golden_kestrel.core.init();</script>
+{% endblock %}
