@@ -28,6 +28,6 @@ This guide explains everything you need to know about setting up your Explorer f
 
 .. toctree::
    :hidden:
-   :caption: Support snd training
+   :caption: Support and training
 
-   support-and-trainig
+   support-and-training

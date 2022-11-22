@@ -1,16 +1,18 @@
 Access and authentication
 *************************
-Here at Altmetric security and privacy is of the utmost importantance to us which is why we provide you with various ways to control access to your Explorer for Institutions. We support the following types of user authentication:
+Here at Altmetric security and privacy are of the utmost importantance to us which is why we provide you with various ways to control access to your |efi|. 
 
-#. **IP access** - We allow access to your Explorer for Institutions instance only within your office/campus IP ranges. Users can go to altmetricexplorer.com and access the platform as a guest. This means a user is given access to the full database and can register via the top-right in order to create an account for additional functionalities including saved searches and email alerts.
+We support the following types of user access/authentication:
+
+#. **IP access** - We allow access to your |efi| instance only within your office/campus IP ranges. Users can go to altmetricexplorer.com and access the platform as a guest. This means a user is given access to the full database and can register via the top-right in order to create an account for additional functionalities including saved searches and email alerts.
 #. **Unique invite link** - We generate a unique link you can share with your users to create their own account.
-#. **Email address** - We allow your users to sign up with their institutional email address, so as an example anyone with an @altmetric.com email would be able to create their own profile in the EFI.
-#. **Single-sign on** - Altmetric supports SAML2 based authentication (OpenAthens, AD-FS, Azure, Shibboleth etc), and we're a member of the UK Federation and Surfconext. If your institution uses SAML2 based authentication we can work with your team to implement federated access to th Explorer. When SSO is enabled, users are redirected to your IdP (Identity Provider) for authentication. This means your members can use their institutional credentials to login to Explorer for Institutions and you control who has access to your instance.
+#. **Email address** - We allow your users to sign up with their institutional email address, so as an example anyone with an **@altmetric.com** email would be able to create their own profile in the |efi|.
+#. **Single sign-on** - Altmetric supports SAML2 based authentication (OpenAthens, AD-FS, Azure, Shibboleth etc), and we're a member of the UK Federation and Surfconext. If your institution uses SAML2 based authentication we can work with your team to implement federated access to th Explorer. When SSO is enabled, users are redirected to your IdP (Identity Provider) for authentication. This means your members can use their institutional credentials to login to |efi| and you control who has access to your instance.
 
 .. note::
-    There is an additional fee for enablinging SSO. If this isn't already part of your contract or if you are interested adding SSO please contact your Account Manager to discuss.
+    There is an additional fee for enablinging SSO. If this isn't already part of your contract or if you are interested adding SSO please contact your |account-manager| to discuss.
 
-Single-Sign On
+Single Sign-On
 ==============
 In order to set up SSO you'll need to provide Altmetric with a technical contact who will be able to answer questions about the university's ldP (Identity Provider).
 
@@ -27,8 +29,8 @@ If your organisation is not a member or you would prefer to provide us with a di
 
 In order for users to be able to login successfully one of the following attributes will need to be released:
 
-- ``eduPersonPrincipalName`` (``urn:mace:dir:attribute-def:eduPersonPrincipalName``, ``urn:oid:1.3.6.1.4.1.5923.1.1.1.6``)
-- ``mail`` (``urn:mace:dir:attribute-def:mail``, ``urn:oid:0.9.2342.19200300.100.1.3``)
+- ``eduPersonPrincipalName`` => ``urn:mace:dir:attribute-def:eduPersonPrincipalName`` or ``urn:oid:1.3.6.1.4.1.5923.1.1.1.6``
+- ``mail`` => ``urn:mace:dir:attribute-def:mail`` or ``urn:oid:0.9.2342.19200300.100.1.3``
 
 .. note::
     
@@ -43,5 +45,4 @@ with the ``mail`` attribute.
 
 Surfconext
 ----------
-Adding SSO provided by Surfconext is really simple, all you'll need to do is have your technical contact reach out to support@surfconext.nl and let them know that you'd like to
-add the `Altmetric Explorer <https://dashboard.surfconext.nl/apps/7662/saml20_sp/about>`_ service and we'll do the rest.
+Adding SSO provided by Surfconext is really simple, all you'll need to do is have your technical contact reach out to support@surfconext.nl and let them know that you'd like to add the `Altmetric Explorer <https://dashboard.surfconext.nl/apps/7662/saml20_sp/about>`_ service and we'll do the rest.
