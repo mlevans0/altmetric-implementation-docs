@@ -1,0 +1,13 @@
+version: '1'
+services:
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: altmetric-implementation-docs
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/docs
+    ports:
+      - 8000:8000
