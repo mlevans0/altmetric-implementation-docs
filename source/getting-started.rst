@@ -58,7 +58,7 @@ The |efi| implementation process is as follows:
 #. Before the contract is signed, Altmetric will review your publications data to ensure we can build a configured |efi| instance.
 #. After the contract is signed, your |account-manager| will hand over to the Altmetric regional |implementation-contact| to begin the project, they will be your main contact point at Altmetric.
 #. The |implementation-contact| begins the implementation with a kick-off call. On the call, we will talk through the implementation process, discuss how we will collect your data to populate your configurable |efi| instance, explain the support we offer and how to improve roll-out of the |efi|, they will confirm launch timelines, and answer any questions you may have. It's useful to assign a key contact to the project on your team and invite your technical lead/publications manager to the kick-off meeting.
-#. Once your data source is agreed and received by Altmetric, we will build your customised |efi| instance. You will be kept up-to-date via email. This typically takes around two weeks.
+#. Once your data source is agreed and received by Altmetric, we will build your customized |efi| instance. You will be kept up-to-date via email. This typically takes around two weeks.
 #. When your configured instance is live and populated with your data, we send you the details of how to login, explain your dashboard and offer the opportunity for feedback.
 #. A training webinar will also be scheduled at this time.
 #. The implementation phase is now complete! We'll explain how you can contact our Support Team throughout your subscription to ask questions.

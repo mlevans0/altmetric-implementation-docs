@@ -1,9 +1,9 @@
 Overview
 ********
-Altmetric collects attention data for outputs that have been mentioned online across a range of sources. As items in the Altmetric database are not organised by institution, 
+Altmetric collects attention data for outputs that have been mentioned online across a range of sources. As items in the Altmetric database are not organized by institution, 
 we can integrate with third party systems or allow for a manual CSV upload in order to set up your institutional edition of |efi|, with outputs produced by your own authors and departments. 
 
-We will then populate |efi| by linking your set of publications, authors and departments with the scholarly publications already tracked in the Altmetric database. This enables you to browsethe altmetrics of your institutional outputs by your institutional authors and departments.
+We will then populate |efi| by linking your set of publications, authors and departments with the scholarly publications already tracked in the Altmetric database. This enables you to browse the altmetrics of your institutional outputs by your institutional authors and departments.
 
 Connecting to your Research Information Management System
 *********************************************************
@@ -15,8 +15,8 @@ If your institution uses Symplectic Elements, Altmetric is able to easily provid
 
 Instructions are detailed below on establishing the connection between |efi| and your instance of Symplectic Elements.
 
-Administator instructions for Elements
---------------------------------------
+Administrator instructions for Elements
+---------------------------------------
 Please follow the instructions below to set up your Elements API for Altmetric.
 
 Open a port
@@ -81,13 +81,47 @@ Restart API under **Scheduled Jobs** .
 
 Send Altmetric your API details and credentials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Once you have enabled access to your Symplectic Elements API endpoint (and provided access for both live and staging servers), please securly send the following to your |implementation-contact|:
+Once you have enabled access to your Symplectic Elements API endpoint (and provided access for both live and staging servers), please securely send the following to your |implementation-contact|:
 
  - The API endpoint you set up
  - The login credentials
 
-You will hear back from your |implementation-contact| about whether or not the connection with your Symplectic Elements API endpoint, was successful. Once the connection has been confirmed to be successful,
-we will schedule your implementation in order to begin pulling in your publications data from Symplectic Elements.
+You will hear back from your |implementation-contact| about whether or not the connection with your Symplectic Elements API endpoint, was successful. Once the connection has been confirmed to be successful, we will schedule your implementation in order to begin pulling in your publications data from Symplectic Elements.
+
+Object privacy settings for Elements
+------------------------------------
+In version 6.2, Symplectic introduced a more extensive privacy framework that allowed objects/items to be set as **private** , **internal** or **public**. The integration we have with Elements can be configured to apply these same familiar privacy concepts to your |efi| giving you full control of how your data is shared with us. 
+
+You can read more about object privacy for Element 6.2 and above `here <https://support.symplectic.co.uk/support/solutions/articles/6000246835-introducing-object-privacy-v6-2-onwards->`_.
+
+Synchronizing objects based on their privacy level is available at the following restrictive levels:
+  
+  - **Public** - We will only import **public** user profiles, research outputs and relationships
+  - **Public and Internal** - We will only import **public** and **internal** user profiles, research outputs and relationships
+
+Objects and relationships that are set as **Private** won't ever appear in the Explorer. 
+
+Your |implementation-contact| will discus these configuration options with during onboarding. If you're an existing Altmetric customer and would like to customize your existing configuration settings please contact support@altmetric.com.
+
+.. warning ::
+
+  If you're using a version of Elements prior to 6.2 all objects **except** private relationships will be imported. For information on data privacy in Elements prior to v6.2 please see:
+
+    - `Introduction to Data Privacy and Personal Data in Elements (v5.12 onward) <https://support.symplectic.co.uk/support/solutions/articles/6000189182-introduction-to-data-privacy-and-personal-data-in-elements-v5-12-onward->`_
+    - `Previous Changes to Data Privacy by Elements Version <https://support.symplectic.co.uk/support/solutions/articles/6000188846-previous-changes-to-data-privacy-by-elements-version>`_
+
+Controlling what objects are included in your |efi|
+---------------------------------------------------
+As well being able to choose what object privacy levels are synchronized with your |efi| we also provide you with additional options to include/exclude certain user status' and user profile types.
+
+  - **User status** - Importing users can be configured to synchronize either **All users** or to only allow **Current users**.
+  - **User profile type** - Importing users based on their profile type can be configured to synchronize either **All users**, **Academic or student users** or just **Academic users** only.
+
+Your |implementation-contact| will discus these configuration options with during onboarding. If you're an existing Altmetric customer and would like to customize your existing configuration settings please contact support@altmetric.com.
+
+.. note ::
+
+  Changes to your |efi| configuration will trigger a reset and full import of your Elements data. Depending on the size of your institution it may take **several** days to complete.
 
 Pure
 ====
@@ -122,7 +156,7 @@ Create an API key and allow access to required endpoints
 
 Provide Altmetric with access to your Pure API endpoint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Once you have enabled access to your API endpoint please securly provide the following information to your |implementation-contact|:
+Once you have enabled access to your API endpoint please securely provide the following information to your |implementation-contact|:
 
 - Your Pure API endpoint, e.g., in a format like: https://pure.university.ac.uk/ws/rest/
 - An API key with access to all **four** above-named endpoints
@@ -135,7 +169,7 @@ Send your publications data via CSV spreadsheet
 You can populate |efi| via a CSV spreadsheet detailing your author, publications and group/department data. Altmetric require two CSV files to populate your instance:
 
 - A Publications file listing your author names, publication identifiers (e.g. DOIs, PMIDs, etc.) and group/department affiliation for each item
-- An Organisational hierarchy file detailing your groups structure to populate the Departments tab in the Explorer. We create this structure to help you browse sets of publications in groups that make sense for your organisation. This might be your university hierarchy or groupings such as open access status; funding award; grant ID; therapeutic area; animal type; health conditions; subjects, etc. The key thing is your groups are relevant to how you would like to report on Altmetric data.
+- An Organizational hierarchy file detailing your groups structure to populate the Departments tab in the Explorer. We create this structure to help you browse sets of publications in groups that make sense for your organization. This might be your university hierarchy or groupings such as open access status; funding award; grant ID; therapeutic area; animal type; health conditions; subjects, etc. The key thing is your groups are relevant to how you would like to report on Altmetric data.
 
 Preparing your publications file
 ================================
@@ -231,11 +265,11 @@ The department information should match the group names in your hierarchy CSV an
 
 A list of supported identifiers can be found in the :ref:`Supported identifiers` section.
 
-Providing group information in your publications file for organisations without a traditional hierarchy structure
+Providing group information in your publications file for organizations without a traditional hierarchy structure
 =================================================================================================================
 You can add multiple sections in your hierarchy if you would like to browse by different categories, e.g. Geography and Therapeutic Area.
 
-Here is a publications file example for organisations with multiple group types:
+Here is a publications file example for organizations with multiple group types:
 
 .. list-table::
    :widths: 20 20 20 20 20
@@ -355,14 +389,14 @@ Example using semi-colons to separate departments:
      - 10.1234/biolo123
      -  
 
-Organisational hierarchy: building your departments/groups structure
+Organizational hierarchy: building your departments/groups structure
 ====================================================================
-In order to browse your data by department or group, you will need to provide the structure of your departments/groups in a separate spreadsheet. Each level in the hierarchy should be listed in a separate column. This creates a section in the Explorer *Departments* view. A Level 1 group will be a new section, with its Level 2 groups associated as children. Column A should always contain the name of your organisation - a *Top Level* department which won't appear in the Explorer. See below for examples in |efi| and as CSV spreadsheets. Please note: the department names must match the group names in your publications spreadsheet and not include duplicates.
+In order to browse your data by department or group, you will need to provide the structure of your departments/groups in a separate spreadsheet. Each level in the hierarchy should be listed in a separate column. This creates a section in the Explorer *Departments* view. A Level 1 group will be a new section, with its Level 2 groups associated as children. Column A should always contain the name of your organization - a *Top Level* department which won't appear in the Explorer. See below for examples in |efi| and as CSV spreadsheets. Please note: the department names must match the group names in your publications spreadsheet and not include duplicates.
 
 a) **University/research institution hierarchy example** Here's an example of a university departmental hierarchy in |efi|:
 
 .. image:: assets/Institution-EFI.png
-  :alt: Example of an institutions departmental hierarchy showing the department of humanities and the deparmtnet of life sciences
+  :alt: Example of an institutions departmental hierarchy showing the department of humanities and the department of life sciences
 
 Here's how this hierarchy is structured in the CSV spreadsheet:
 
@@ -372,7 +406,7 @@ Here's how this hierarchy is structured in the CSV spreadsheet:
 b) **Funder hierarchy example** Here's an example of a funder departmental hierarchy in |efi|:
 
 .. image:: assets/Funder-EFI.png
-    :alt: Example of a funder departmental hierarchy showing groupings by institues and signature initiatives
+    :alt: Example of a funder departmental hierarchy showing groupings by institutes and signature initiatives
 
 Here's how this hierarchy is structured in the CSV spreadsheet (with parent departments bolded for emphasis):
 
@@ -417,15 +451,15 @@ Please use the instructions above to prepare your data and let us know if you ha
 
 Keeping your data up-to-date via spreadsheet
 ============================================
-Using the CSV uploader tool, one or more administrators at your organisation can maintain the data integration by uploading new CSVs each time you wish to add, remove, or alter publications or departments. 
-During the implementation process, we will establish who at your organisation will be designated as an administrator; they will have access to the CSV tool and the administrator's panel. Training will
+Using the CSV uploader tool, one or more administrators at your organization can maintain the data integration by uploading new CSVs each time you wish to add, remove, or alter publications or departments. 
+During the implementation process, we will establish who at your organization will be designated as an administrator; they will have access to the CSV tool and the administrator's panel. Training will
 be provided for any individuals who are designated administrators. 
 
 Documentation about the CSV tool can be found in the Support Portal `here <https://help.altmetric.com/support/solutions/articles/6000240718-csv-uploader-tool-preparing-the-data>`_.
 
 Harvesting from your repository OAI-PMH feed
 ********************************************
-If your institution uses an institutional repository with an OAI-PMH feed, e.g. EPrints, DSpace or bepress, Altmetric can populate your instance of |efi| using your repository data. This enables us to import your institutional authors, groups and organisational hierarchy from your institutional repository to |efi|, and update your data automatically. 
+If your institution uses an institutional repository with an OAI-PMH feed, e.g. EPrints, DSpace or bepress, Altmetric can populate your instance of |efi| using your repository data. This enables us to import your institutional authors, groups and organizational hierarchy from your institutional repository to |efi|, and update your data automatically. 
 
 If you have a non-traditional structure to your institutional hierarchy please read this additional `information <https://help.altmetric.com/a/solutions/articles/6000258260?portalId=6000060531>`_.
 
@@ -489,7 +523,7 @@ The unique ``id`` for the first institutional author would be "koulis@glasgow.uk
 
 Hierarchy
 ---------
-Altmetric recreates your organisational hierarchy from your institutional repository in order to populate the Departments tab in |efi|. Groups should be available in the OAI-PMH feed, as detailed in the ``ListSets`` example below: http://eprints.lse.ac.uk/cgi/oai2?verb=ListSets. 
+Altmetric recreates your organizational hierarchy from your institutional repository in order to populate the Departments tab in |efi|. Groups should be available in the OAI-PMH feed, as detailed in the ``ListSets`` example below: http://eprints.lse.ac.uk/cgi/oai2?verb=ListSets. 
 
 The sets created should replicate your browse by **Division/Group/Faculty** view in the front end of your repository.
 
@@ -545,7 +579,7 @@ Because of the filtering applied using ``Department =`` the **BrowZine** wouldn'
 This would result in the following structure within the Explorer.
 
 .. image:: assets/esploro-departments.png
-  :alt: Example of Esplorp departmental hierarchy showing the school of biology sitting under the faculty of science
+  :alt: Example of Esploro departmental hierarchy showing the school of biology sitting under the faculty of science
 
 Next steps
 ----------
@@ -556,7 +590,7 @@ Frequently asked questions
 
 What happens after my data are imported into |efi|?
 ===================================================
-After Altmetric connects with your system for the first time, an initial mass import of all your authors, publications, departments, etc. will be carried out. The authors, departments, and organisational hierarchy information will be used to populate the **Authors** and **Departments** tabs that can be found in **My institution**. 
+After Altmetric connects with your system for the first time, an initial mass import of all your authors, publications, departments, etc. will be carried out. The authors, departments, and organizational hierarchy information will be used to populate the **Authors** and **Departments** tabs that can be found in **My institution**. 
 
 Using the publications data you have supplied, Altmetric will retrieve any attention data it has stored in association with these particular publications. Thus, attention data for all scholarly articles in your 
 institution will be automatically supplied once the connection is made. There is no further work required from you once you have provided Altmetric with access.

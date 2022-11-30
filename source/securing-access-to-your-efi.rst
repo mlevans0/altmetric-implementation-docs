@@ -1,6 +1,6 @@
 Access and authentication
 *************************
-Here at Altmetric security and privacy are of the utmost importantance to us which is why we provide you with various ways to control access to your |efi|. 
+Here at Altmetric security and privacy are of the utmost importance to us which is why we provide you with various ways to control access to your |efi|. 
 
 We support the following types of user access/authentication:
 
@@ -10,7 +10,7 @@ We support the following types of user access/authentication:
 #. **Single sign-on** - Altmetric supports SAML2 based authentication (OpenAthens, AD-FS, Azure, Shibboleth etc), and we're a member of the UK Federation and Surfconext. If your institution uses SAML2 based authentication we can work with your team to implement federated access to th Explorer. When SSO is enabled, users are redirected to your IdP (Identity Provider) for authentication. This means your members can use their institutional credentials to login to |efi| and you control who has access to your instance.
 
 .. note::
-    There is an additional fee for enablinging SSO. If this isn't already part of your contract or if you are interested adding SSO please contact your |account-manager| to discuss.
+    There is an additional fee for enabling SSO. If this isn't already part of your contract or if you are interested adding SSO please contact your |account-manager| to discuss.
 
 Single Sign-On
 ==============
@@ -23,7 +23,7 @@ UK and Rest of World (excl. Netherlands)
 
 Our production metadata can be found within the UK Access Federation or alternatively available here: https://www.altmetric.com/explorer/shibboleth/metadata.xml.
 
-If your organisation is not a member or you would prefer to provide us with a direct link to your metadata instead, this is also supported.
+If your organization is not a member or you would prefer to provide us with a direct link to your metadata instead, this is also supported.
 
 **Attributes**
 
