@@ -536,6 +536,8 @@ If you are a DiVA Portal customer and are using our OAI-PMH integration with the
 
 If either of these requirements are something that you're interested in you can read more about translating/renaming departments `here <https://help.altmetric.com/a/solutions/articles/6000261793?portalId=6000060531>`_ and re-mapping papers `here <https://help.altmetric.com/a/solutions/articles/6000261794?portalId=6000060531>`_.
 
+We are also able to filter out specific record types based on their ``setSpec``, for example as part of the synchronization process we're able to exclude all records that have the name ``studentThesis``.
+
 Haplo
 ^^^^^
 If you use Haplo for your repository then our integration will be configured to use the ``oai_datacite`` metadata prefix. This will enable us to specifically import authors that are affiliated with your institution.
