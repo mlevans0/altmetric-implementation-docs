@@ -101,7 +101,10 @@ Synchronizing objects based on their privacy level is available at the following
 
 Objects and relationships that are set as **Private** won't ever appear in the Explorer. 
 
-Your |implementation-contact| will discus these configuration options with during onboarding. If you're an existing Altmetric customer and would like to customize your existing configuration settings please contact support@altmetric.com.
+Your |implementation-contact| will discuss these configuration options with during onboarding. If you're an existing Altmetric customer and would like to customize your existing configuration settings please contact support@altmetric.com.
+
+.. important ::
+  - Changes to your |efi| configuration will trigger a reset and full import of your Elements data. Depending on the size of your institution it may take **several** days to complete.
 
 .. warning ::
 
@@ -110,18 +113,44 @@ Your |implementation-contact| will discus these configuration options with durin
     - `Introduction to Data Privacy and Personal Data in Elements (v5.12 onward) <https://support.symplectic.co.uk/support/solutions/articles/6000189182-introduction-to-data-privacy-and-personal-data-in-elements-v5-12-onward->`_
     - `Previous Changes to Data Privacy by Elements Version <https://support.symplectic.co.uk/support/solutions/articles/6000188846-previous-changes-to-data-privacy-by-elements-version>`_
 
-Controlling what objects are included in your |efi|
----------------------------------------------------
-As well being able to choose what object privacy levels are synchronized with your |efi| we also provide you with additional options to include/exclude certain user status' and user profile types.
+User status and user profile type settings
+------------------------------------------
+As well as being able to choose what object privacy levels are synchronized with their |efi| instance, customers have additional options to filter users depending on their status and user profile type.
 
-  - **User status** - Importing users can be configured to synchronize either **All users** or to only allow **Current users**.
-  - **User profile type** - Importing users based on their profile type can be configured to synchronize either **All users**, **Academic or student users** or just **Academic users** only.
+Importing users based on status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Symplectic Elements includes an option to set user profiles as Current (i.e. currently affiliated with the organization; this status can include both academic and non-academic users).
 
-Your |implementation-contact| will discus these configuration options with during onboarding. If you're an existing Altmetric customer and would like to customize your existing configuration settings please contact support@altmetric.com.
+|efi| can be configured to either:
 
-.. note ::
+- Import **All** users
+- Only import **Current** users
 
-  Changes to your |efi| configuration will trigger a reset and full import of your Elements data. Depending on the size of your institution it may take **several** days to complete.
+Importing users based on profile type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Symplectic Elements includes an option to assign specific types to user profiles, depending on their role in the institution. 
+
+The available profile types are:
+
+- **Academic** : Excludes all users with non-academic profiles (e.g. admin staff). When a user is marked as Academic, Elements is set to automatically retrieve their publication data from external sources
+- **Student** : Excludes Academic users and any other non-academic profiles (e.g. admin staff)
+
+In some instances, users may be assigned to both these types, or to neither (e.g. admin staff). 
+
+Importing users based on their profile type can be configured to:
+ 
+- Import **All** users
+- Only import users that are set as **Academic** or **Student**
+- Import **Academic** users only
+
+.. important ::
+  - User status, profile type and privacy level settings work in combination. For example:
+  
+     - If **Current** users and **Academic** users are both selected, only those users that are both current and academic will be imported (as opposed to importing all current users, and in addition all academic users separately)
+     - If **Current** users, **Academic** users and the **Public** privacy setting are all selected, only those users that are both current and academic, and marked as Public, will be imported
+  - Changes to your |efi| configuration will trigger a reset and full import of your Elements data. Depending on the size of your institution it may take **several** days to complete.
+
+Your |implementation-contact| will discuss these configuration options with during onboarding. If you're an existing Altmetric customer and would like to customize your existing configuration settings please contact support@altmetric.com.
 
 Pure
 ====
@@ -194,11 +223,6 @@ Each row of this file should always correspond to:
 - Author names (with more than one author name separated by semicolon)
 - Department/groups associated with each publication (with more than one department/group separated by semicolon)
 - Publication identifiers
-
-.. hint::
-
-  If you are using a semi-colon to provide multiple values per colum don't double quote the column itself as this can lead to unexpected results. Simply wrap the individual name in quotes ,for example:
-  ``"Carberry,Josiah";"Brush,Painter"`` instead of ``"Carberry,Josiah;Brush,Painter"``.
 
 We use this data to populate publications, authors and department/groups in |efi|. Here is a larger sample data set, with multiple IDs per item:
 
