@@ -152,6 +152,10 @@ Importing users based on their profile type can be configured to:
 
 Your |implementation-contact| will discuss these configuration options with during onboarding. If you're an existing Altmetric customer and would like to customize your existing configuration settings please contact support@altmetric.com.
 
+Email notifications
+-------------------
+We provide all our Elements customers with the option to receive an email notification (sent to one or more email addresses) on the completion of an import. If you'd like to be informed once an import has completed please provide your |implementation-contact| with the email addresses and we'll make the necessary configuration changes.
+
 Pure
 ====
 Altmetric can integrate with Pure in order to set up your institutional edition of |efi|, allowing you to view your institution's publication outputs, authors, and departments within the Explorer. We populate the |efi| by linking your set of publications, authors and departments with the scholarly publications already tracked in the Altmetric database.
