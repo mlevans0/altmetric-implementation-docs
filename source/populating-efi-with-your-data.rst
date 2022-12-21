@@ -1,7 +1,6 @@
 Overview
 ********
-Altmetric collects attention data for outputs that have been mentioned online across a range of sources. As items in the Altmetric database are not organized by institution, 
-we can integrate with third party systems or allow for a manual CSV upload in order to set up your institutional edition of |efi|, with outputs produced by your own authors and departments. 
+Altmetric collects attention data for outputs that have been mentioned online across a range of sources. As items in the Altmetric database are not organized by institution, we can integrate with third party systems or allow for a manual CSV upload in order to set up your institutional version of |efi|, with outputs produced by your own authors and departments. 
 
 We will then populate |efi| by linking your set of publications, authors and departments with the scholarly publications already tracked in the Altmetric database. This enables you to browse the altmetrics of your institutional outputs by your institutional authors and departments.
 
@@ -11,7 +10,7 @@ Implementation involves granting API access to Altmetric, so that |efi| can be a
 
 Symplectic Elements
 ===================
-If your institution uses Symplectic Elements, Altmetric is able to easily provide a seamless link between Elements and |efi|. Currently, Altmetric can connect to Symplectic Elements v5.5, or a more recent version. 
+If your institution uses Symplectic Elements, Altmetric is able to easily provide a seamless link between Elements and |efi|. Currently, Altmetric can connect to Symplectic Elements v5.5, or above. 
 
 Instructions are detailed below on establishing the connection between |efi| and your instance of Symplectic Elements.
 
@@ -38,7 +37,7 @@ Run this to see if your port is now listed:
 ``netsh http show sslcert``
 
 .. important::
-    Whilst Altmetric does not require Elements to be access over SSL it's **highly recommended** that it is. Using SSL is a good way to ensure your data is sent securely to our servers, without SSL we will pull your data across the network in plain text. Note that even without SSL, no sensitive employee information is ever sent to Altmetric.
+    Whilst Altmetric does not require Elements to be accessed over SSL it's **highly recommended** that it is. Using SSL is a good way to ensure your data is sent securely to our servers, without SSL we will pull your data across the network in plain text. Note that even without SSL, no sensitive employee information is ever sent to Altmetric.
 
 Add API endpoint
 ^^^^^^^^^^^^^^^^
@@ -162,7 +161,7 @@ Altmetric can integrate with Pure in order to set up your institutional edition 
 
 Please follow the instructions below to set up your Pure API for Altmetric.
 
-Administator instructions for Pure
+Administrator instructions for Pure
 -----------------------------------
 Allow access through your firewall
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -174,7 +173,7 @@ If you have a firewall, ensure you have opened a port that would allow our IP ad
 
 .. hint::
   
-  Adding both IP ranges to your Elements production instance allows us to test your import via our staging (development) server and then launch on our live server.
+  Adding both IP ranges to your Pure production instance allows us to test your import via our staging (development) server and then launch on our live server.
 
 Create an API key and allow access to required endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -218,9 +217,6 @@ At minimum, we will need a file with three columns, containing the information s
    * - Carberry, Josiah
      - School of Pottery
      - 10.1234/psycer123
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
 		
 Each row of this file should always correspond to:
 

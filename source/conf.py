@@ -71,8 +71,8 @@ html_js_files = [
 html_static_path = ['_static']
 
 rst_prolog = """
-.. |implementation-contact| replace:: Implementation Manager
-.. |implementation-contacts| replace:: Implementation Managers
+.. |implementation-contact| replace:: Engagement Manager
+.. |implementation-contacts| replace:: Engagement Managers
 .. |efi| replace:: Explorer for Institutions
 .. |account-manager| replace:: Account Manager
 """

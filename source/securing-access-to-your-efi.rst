@@ -4,10 +4,10 @@ Here at Altmetric security and privacy are of the utmost importance to us which 
 
 We support the following types of user access/authentication:
 
-#. **IP access** - We allow access to your |efi| instance only within your office/campus IP ranges. Users can go to altmetricexplorer.com and access the platform as a guest. This means a user is given access to the full database and can register via the top-right in order to create an account for additional functionalities including saved searches and email alerts.
+#. **IP access** - We allow access to your |efi| instance only within your office/campus IP ranges. Users can go to altmetric.com/explorer and access the platform as a guest. This means a user is given access to the full database and can create an account, via the plus sign at the bottom left hand corner for additional functionalities including saved searches and email alerts.
 #. **Unique invite link** - We generate a unique link you can share with your users to create their own account.
 #. **Email address** - We allow your users to sign up with their institutional email address, so as an example anyone with an **@altmetric.com** email would be able to create their own profile in the |efi|.
-#. **Single sign-on** - Altmetric supports SAML2 based authentication (OpenAthens, AD-FS, Azure, Shibboleth etc), and we're a member of the UK Federation and Surfconext. If your institution uses SAML2 based authentication we can work with your team to implement federated access to th Explorer. When SSO is enabled, users are redirected to your IdP (Identity Provider) for authentication. This means your members can use their institutional credentials to login to |efi| and you control who has access to your instance.
+#. **Single sign-on** - Altmetric supports SAML2 based authentication (OpenAthens, AD-FS, Azure, Shibboleth etc), and we're a member of the UK Federation and Surfconext. If your institution uses SAML2 based authentication we can work with your team to implement federated access to the Explorer. When SSO is enabled, users are redirected to your IdP (Identity Provider) for authentication. This means your members can use their institutional credentials to login to |efi| and you control who has access to your instance.
 
 .. note::
     There is an additional fee for enabling SSO. If this isn't already part of your contract or if you are interested adding SSO please contact your |account-manager| to discuss.
