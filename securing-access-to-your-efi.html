@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Access and authentication &mdash; Altmetric Implementation Documentation 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/custom.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="populating-efi-with-your-data.html" />
+    <link rel="prev" title="Co-branding your Explorer for Institutions instance" href="branding.html" /> 
+  <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+  <script type='text/javascript' src='https://api.altmetric.com/javascript/components/golden-kestrel/golden-kestrel.js'></script>
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html">
+            <img src="_static/altmetric-logo-white.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Frequently asked questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Branding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="branding.html">Co-branding your Explorer for Institutions instance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Securing access to your EFI</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Access and authentication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#single-sign-on">Single Sign-On</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uk-and-rest-of-world-excl-netherlands">UK and Rest of World (excl. Netherlands)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#surfconext">Surfconext</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Populating EFI with your data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="populating-efi-with-your-data.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="populating-efi-with-your-data.html#connecting-to-your-research-information-management-system">Connecting to your Research Information Management System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="populating-efi-with-your-data.html#send-your-publications-data-via-csv-spreadsheet">Send your publications data via CSV spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="populating-efi-with-your-data.html#harvesting-from-your-repository-oai-pmh-feed">Harvesting from your repository OAI-PMH feed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="populating-efi-with-your-data.html#frequently-asked-questions">Frequently asked questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support and training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="support-and-training.html">Getting the most out of your subscription</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Altmetric Implementation Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Access and authentication</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/securing-access-to-your-efi.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="access-and-authentication">
+<h1>Access and authentication<a class="headerlink" href="#access-and-authentication" title="Permalink to this heading"></a></h1>
+<p>Here at Altmetric security and privacy are of the utmost importance to us which is why we provide you with various ways to control access to your Explorer for Institutions.</p>
+<p>We support the following types of user access/authentication:</p>
+<ol class="arabic simple">
+<li><p><strong>IP access</strong> - We allow access to your Explorer for Institutions instance only within your office/campus IP ranges. Users can go to altmetric.com/explorer and access the platform as a guest. This means a user is given access to the full database and can create an account, via the plus sign at the bottom left hand corner for additional functionalities including saved searches and email alerts.</p></li>
+<li><p><strong>Unique invite link</strong> - We generate a unique link you can share with your users to create their own account.</p></li>
+<li><p><strong>Email address</strong> - We allow your users to sign up with their institutional email address, so as an example anyone with an <strong>&#64;altmetric.com</strong> email would be able to create their own profile in the Explorer for Institutions.</p></li>
+<li><p><strong>Single sign-on</strong> - Altmetric supports SAML2 based authentication (OpenAthens, AD-FS, Azure, Shibboleth etc), and we’re a member of the UK Federation and Surfconext. If your institution uses SAML2 based authentication we can work with your team to implement federated access to the Explorer. When SSO is enabled, users are redirected to your IdP (Identity Provider) for authentication. This means your members can use their institutional credentials to login to Explorer for Institutions and you control who has access to your instance.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is an additional fee for enabling SSO. If this isn’t already part of your contract or if you are interested adding SSO please contact your Account Manager to discuss.</p>
+</div>
+<section id="single-sign-on">
+<h2>Single Sign-On<a class="headerlink" href="#single-sign-on" title="Permalink to this heading"></a></h2>
+<p>In order to set up SSO you’ll need to provide Altmetric with a technical contact who will be able to answer questions about the university’s ldP (Identity Provider).</p>
+<section id="uk-and-rest-of-world-excl-netherlands">
+<h3>UK and Rest of World (excl. Netherlands)<a class="headerlink" href="#uk-and-rest-of-world-excl-netherlands" title="Permalink to this heading"></a></h3>
+<p><strong>Metadata</strong></p>
+<p>Our production metadata can be found within the UK Access Federation or alternatively available here: <a class="reference external" href="https://www.altmetric.com/explorer/shibboleth/metadata.xml">https://www.altmetric.com/explorer/shibboleth/metadata.xml</a>.</p>
+<p>If your organization is not a member or you would prefer to provide us with a direct link to your metadata instead, this is also supported.</p>
+<p><strong>Attributes</strong></p>
+<p>In order for users to be able to login successfully one of the following attributes will need to be released:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eduPersonPrincipalName</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">urn:mace:dir:attribute-def:eduPersonPrincipalName</span></code> or <code class="docutils literal notranslate"><span class="pre">urn:oid:1.3.6.1.4.1.5923.1.1.1.6</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mail</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">urn:mace:dir:attribute-def:mail</span></code> or <code class="docutils literal notranslate"><span class="pre">urn:oid:0.9.2342.19200300.100.1.3</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>Accounts require a valid email address so that they can receive opt-in digest/notification emails from the system. If the <code class="docutils literal notranslate"><span class="pre">eduPersonPrincipalName</span></code> is not a valid email address and can’t
+be used to receive email (i.e. is purely a scoped identifier) then you will need to either:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Additionally release the <code class="docutils literal notranslate"><span class="pre">mail</span></code> attribute, or</p></li>
+<li><p>Switch to using just the <code class="docutils literal notranslate"><span class="pre">mail</span></code> attribute</p></li>
+</ul>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">mail</span></code> is released alongside the <code class="docutils literal notranslate"><span class="pre">eduPersonPrincipalName</span></code> the <code class="docutils literal notranslate"><span class="pre">eduPersonPrincipalName</span></code> can be used as the account identifier but the user will receive their digest emails via the value associated
+with the <code class="docutils literal notranslate"><span class="pre">mail</span></code> attribute.</p>
+</section>
+<section id="surfconext">
+<h3>Surfconext<a class="headerlink" href="#surfconext" title="Permalink to this heading"></a></h3>
+<p>Adding SSO provided by Surfconext is really simple, all you’ll need to do is have your technical contact reach out to <a class="reference external" href="mailto:support&#37;&#52;&#48;surfconext&#46;nl">support<span>&#64;</span>surfconext<span>&#46;</span>nl</a> and let them know that you’d like to add the <a class="reference external" href="https://dashboard.surfconext.nl/apps/7662/saml20_sp/about">Altmetric Explorer</a> service and we’ll do the rest.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="branding.html" class="btn btn-neutral float-left" title="Co-branding your Explorer for Institutions instance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="populating-efi-with-your-data.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Altmetric LLC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #1a3d74;
+    }
+  </style>
+  <script>golden_kestrel.core.init();</script>
+
+
+</body>
+</html>

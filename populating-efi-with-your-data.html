@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; Altmetric Implementation Documentation 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/custom.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting the most out of your subscription" href="support-and-training.html" />
+    <link rel="prev" title="Access and authentication" href="securing-access-to-your-efi.html" /> 
+  <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+  <script type='text/javascript' src='https://api.altmetric.com/javascript/components/golden-kestrel/golden-kestrel.js'></script>
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html">
+            <img src="_static/altmetric-logo-white.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Frequently asked questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Branding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="branding.html">Co-branding your Explorer for Institutions instance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Securing access to your EFI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="securing-access-to-your-efi.html">Access and authentication</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Populating EFI with your data</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#connecting-to-your-research-information-management-system">Connecting to your Research Information Management System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#symplectic-elements">Symplectic Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#administrator-instructions-for-elements">Administrator instructions for Elements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#open-a-port">Open a port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assign-an-ssl-certificate">Assign an SSL certificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-api-endpoint">Add API endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-altmetric-as-external-system-with-allowed-access">Add Altmetric as external system with allowed access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-an-api-account-for-altmetric">Add an API Account for Altmetric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-altmetric-your-api-details-and-credentials">Send Altmetric your API details and credentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#object-privacy-settings-for-elements">Object privacy settings for Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-status-and-user-profile-type-settings">User status and user profile type settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#importing-users-based-on-status">Importing users based on status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#importing-users-based-on-profile-type">Importing users based on profile type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#email-notifications">Email notifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pure">Pure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#administrator-instructions-for-pure">Administrator instructions for Pure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#allow-access-through-your-firewall">Allow access through your firewall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-an-api-key-and-allow-access-to-required-endpoints">Create an API key and allow access to required endpoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#provide-altmetric-with-access-to-your-pure-api-endpoint">Provide Altmetric with access to your Pure API endpoint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#send-your-publications-data-via-csv-spreadsheet">Send your publications data via CSV spreadsheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-your-publications-file">Preparing your publications file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#providing-group-information-in-your-publications-file-for-organizations-without-a-traditional-hierarchy-structure">Providing group information in your publications file for organizations without a traditional hierarchy structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiple-co-authors-from-the-same-institution">Multiple co-authors from the same institution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiple-departmental-affiliations-for-a-publication">Multiple departmental affiliations for a publication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#organizational-hierarchy-building-your-departments-groups-structure">Organizational hierarchy: building your departments/groups structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-identifiers">Supported identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-steps">Final steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keeping-your-data-up-to-date-via-spreadsheet">Keeping your data up-to-date via spreadsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#harvesting-from-your-repository-oai-pmh-feed">Harvesting from your repository OAI-PMH feed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-your-repository-for-an-efi-integration">Preparing your repository for an EFI integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#provide-your-oai-pmh-endpoint">Provide your OAI-PMH endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publications-and-identifiers">Publications and identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authors">Authors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hierarchy">Hierarchy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#diva-portal">DiVA Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#haplo">Haplo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dspace">DSpace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#esploro">Esploro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#frequently-asked-questions">Frequently asked questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-happens-after-my-data-are-imported-into-efi">What happens after my data are imported into Explorer for Institutions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#do-lists-of-authors-publications-and-groups-altmetric-stay-in-sync">Do lists of authors, publications, and groups Altmetric stay in sync?</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support and training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="support-and-training.html">Getting the most out of your subscription</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Altmetric Implementation Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/populating-efi-with-your-data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
+<p>Altmetric collects attention data for outputs that have been mentioned online across a range of sources. As items in the Altmetric database are not organized by institution, we can integrate with third party systems or allow for a manual CSV upload in order to set up your institutional version of Explorer for Institutions, with outputs produced by your own authors and departments.</p>
+<p>We will then populate Explorer for Institutions by linking your set of publications, authors and departments with the scholarly publications already tracked in the Altmetric database. This enables you to browse the altmetrics of your institutional outputs by your institutional authors and departments.</p>
+</section>
+<section id="connecting-to-your-research-information-management-system">
+<h1>Connecting to your Research Information Management System<a class="headerlink" href="#connecting-to-your-research-information-management-system" title="Permalink to this heading"></a></h1>
+<p>Implementation involves granting API access to Altmetric, so that Explorer for Institutions can be automatically populated with the relevant publication, author and departmental data.</p>
+<section id="symplectic-elements">
+<h2>Symplectic Elements<a class="headerlink" href="#symplectic-elements" title="Permalink to this heading"></a></h2>
+<p>If your institution uses Symplectic Elements, Altmetric is able to easily provide a seamless link between Elements and Explorer for Institutions. Currently, Altmetric can connect to Symplectic Elements v5.5, or above.</p>
+<p>Instructions are detailed below on establishing the connection between Explorer for Institutions and your instance of Symplectic Elements.</p>
+<section id="administrator-instructions-for-elements">
+<h3>Administrator instructions for Elements<a class="headerlink" href="#administrator-instructions-for-elements" title="Permalink to this heading"></a></h3>
+<p>Please follow the instructions below to set up your Elements API for Altmetric.</p>
+<section id="open-a-port">
+<h4>Open a port<a class="headerlink" href="#open-a-port" title="Permalink to this heading"></a></h4>
+<p>You’ll first need to  open a port in your firewall to allow access to your Elements API, to do this you’ll need to find an available port.</p>
+<p>To see the ports currently in use run this from a command line:</p>
+<p><code class="docutils literal notranslate"><span class="pre">netstat</span> <span class="pre">-an</span> <span class="pre">|</span> <span class="pre">find</span> <span class="pre">/i</span> <span class="pre">&quot;listening&quot;</span></code></p>
+</section>
+<section id="assign-an-ssl-certificate">
+<h4>Assign an SSL certificate<a class="headerlink" href="#assign-an-ssl-certificate" title="Permalink to this heading"></a></h4>
+<p>Next you’ll need to take the thumbprint and assign a valid SSL certificate to your chosen port. Replace the <code class="docutils literal notranslate"><span class="pre">&lt;port</span> <span class="pre">number&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;thumbprint&gt;</span></code> before running this from a command line:</p>
+<p><code class="docutils literal notranslate"><span class="pre">netsh</span> <span class="pre">http</span> <span class="pre">add</span> <span class="pre">sslcert</span> <span class="pre">ipport=0.0.0.0:&lt;port</span> <span class="pre">number&gt;</span> <span class="pre">certhash=&lt;thumbprint&gt;</span> <span class="pre">appid={00112233-4455-6677-8899-AABBCCDDEEFF}</span></code></p>
+<p>Run this to see if your port is now listed:</p>
+<p><code class="docutils literal notranslate"><span class="pre">netsh</span> <span class="pre">http</span> <span class="pre">show</span> <span class="pre">sslcert</span></code></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Whilst Altmetric does not require Elements to be accessed over SSL it’s <strong>highly recommended</strong> that it is. Using SSL is a good way to ensure your data is sent securely to our servers, without SSL we will pull your data across the network in plain text. Note that even without SSL, no sensitive employee information is ever sent to Altmetric.</p>
+</div>
+</section>
+<section id="add-api-endpoint">
+<h4>Add API endpoint<a class="headerlink" href="#add-api-endpoint" title="Permalink to this heading"></a></h4>
+<p>Next you’ll need to add an API endpoint. System administrators can configure the Elements API in the <strong>Manage API</strong> area under <strong>System Admin</strong>.</p>
+<p>Add a new API endpoint on the API Endpoints page with the following details:</p>
+<ul class="simple">
+<li><p><strong>Compatibility:</strong> Standard 4.9</p></li>
+<li><p><strong>Scheme:</strong> HTTPS (Secure)</p></li>
+<li><p><strong>Port:</strong> as set up above</p></li>
+<li><p><strong>Path:</strong> for example: <code class="docutils literal notranslate"><span class="pre">elements-api-altmetric</span></code></p></li>
+</ul>
+<p>This will create an endpoint with address like: <code class="docutils literal notranslate"><span class="pre">https://&lt;host&gt;:&lt;port</span> <span class="pre">number&gt;/elements-api-altmetric</span></code>.</p>
+<p>Ensure that it is enabled and then update the page.</p>
+</section>
+<section id="add-altmetric-as-external-system-with-allowed-access">
+<h4>Add Altmetric as external system with allowed access<a class="headerlink" href="#add-altmetric-as-external-system-with-allowed-access" title="Permalink to this heading"></a></h4>
+<p>Add Altmetric’s required IP ranges on the API Configuration page:</p>
+<p><strong>Live:</strong> <code class="docutils literal notranslate"><span class="pre">164.132.63.174</span></code></p>
+<p><strong>Staging:</strong> <code class="docutils literal notranslate"><span class="pre">51.254.16.223</span></code></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Adding both IP ranges to your Elements production instance allows us to test your import via our staging (development) server and then launch on our live server.</p>
+</div>
+</section>
+<section id="add-an-api-account-for-altmetric">
+<h4>Add an API Account for Altmetric<a class="headerlink" href="#add-an-api-account-for-altmetric" title="Permalink to this heading"></a></h4>
+<p>Set up login credentials for Altmetric. Add a new API account for Altmetric to be able to connect to the API endpoint using credentials:</p>
+<ul class="simple">
+<li><p><strong>Username</strong> : altmetric</p></li>
+<li><p><strong>Password</strong> : [set to a secure password]</p></li>
+<li><p><strong>Account rights</strong> : none</p></li>
+</ul>
+<p>Make sure you set the password to something secure.</p>
+<p>Restart API under <strong>Scheduled Jobs</strong> .</p>
+</section>
+<section id="send-altmetric-your-api-details-and-credentials">
+<h4>Send Altmetric your API details and credentials<a class="headerlink" href="#send-altmetric-your-api-details-and-credentials" title="Permalink to this heading"></a></h4>
+<p>Once you have enabled access to your Symplectic Elements API endpoint (and provided access for both live and staging servers), please securely send the following to your Engagement Manager:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The API endpoint you set up</p></li>
+<li><p>The login credentials</p></li>
+</ul>
+</div></blockquote>
+<p>You will hear back from your Engagement Manager about whether or not the connection with your Symplectic Elements API endpoint, was successful. Once the connection has been confirmed to be successful, we will schedule your implementation in order to begin pulling in your publications data from Symplectic Elements.</p>
+</section>
+</section>
+<section id="object-privacy-settings-for-elements">
+<h3>Object privacy settings for Elements<a class="headerlink" href="#object-privacy-settings-for-elements" title="Permalink to this heading"></a></h3>
+<p>In version 6.2, Symplectic introduced a more extensive privacy framework that allowed objects/items to be set as <strong>private</strong> , <strong>internal</strong> or <strong>public</strong>. The integration we have with Elements can be configured to apply these same familiar privacy concepts to your Explorer for Institutions giving you full control of how your data is shared with us.</p>
+<p>You can read more about object privacy for Element 6.2 and above <a class="reference external" href="https://support.symplectic.co.uk/support/solutions/articles/6000246835-introducing-object-privacy-v6-2-onwards-">here</a>.</p>
+<p>Synchronizing objects based on their privacy level is available at the following restrictive levels:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Public</strong> - We will only import <strong>public</strong> user profiles, research outputs and relationships</p></li>
+<li><p><strong>Public and Internal</strong> - We will only import <strong>public</strong> and <strong>internal</strong> user profiles, research outputs and relationships</p></li>
+</ul>
+</div></blockquote>
+<p>Objects and relationships that are set as <strong>Private</strong> won’t ever appear in the Explorer.</p>
+<p>Your Engagement Manager will discuss these configuration options with during onboarding. If you’re an existing Altmetric customer and would like to customize your existing configuration settings please contact <a class="reference external" href="mailto:support&#37;&#52;&#48;altmetric&#46;com">support<span>&#64;</span>altmetric<span>&#46;</span>com</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Changes to your Explorer for Institutions configuration will trigger a reset and full import of your Elements data. Depending on the size of your institution it may take <strong>several</strong> days to complete.</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you’re using a version of Elements prior to 6.2 all objects <strong>except</strong> private relationships will be imported. For information on data privacy in Elements prior to v6.2 please see:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://support.symplectic.co.uk/support/solutions/articles/6000189182-introduction-to-data-privacy-and-personal-data-in-elements-v5-12-onward-">Introduction to Data Privacy and Personal Data in Elements (v5.12 onward)</a></p></li>
+<li><p><a class="reference external" href="https://support.symplectic.co.uk/support/solutions/articles/6000188846-previous-changes-to-data-privacy-by-elements-version">Previous Changes to Data Privacy by Elements Version</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="user-status-and-user-profile-type-settings">
+<h3>User status and user profile type settings<a class="headerlink" href="#user-status-and-user-profile-type-settings" title="Permalink to this heading"></a></h3>
+<p>As well as being able to choose what object privacy levels are synchronized with their Explorer for Institutions instance, customers have additional options to filter users depending on their status and user profile type.</p>
+<section id="importing-users-based-on-status">
+<h4>Importing users based on status<a class="headerlink" href="#importing-users-based-on-status" title="Permalink to this heading"></a></h4>
+<p>Symplectic Elements includes an option to set user profiles as Current (i.e. currently affiliated with the organization; this status can include both academic and non-academic users).</p>
+<p>Explorer for Institutions can be configured to either:</p>
+<ul class="simple">
+<li><p>Import <strong>All</strong> users</p></li>
+<li><p>Only import <strong>Current</strong> users</p></li>
+</ul>
+</section>
+<section id="importing-users-based-on-profile-type">
+<h4>Importing users based on profile type<a class="headerlink" href="#importing-users-based-on-profile-type" title="Permalink to this heading"></a></h4>
+<p>Symplectic Elements includes an option to assign specific types to user profiles, depending on their role in the institution.</p>
+<p>The available profile types are:</p>
+<ul class="simple">
+<li><p><strong>Academic</strong> : Excludes all users with non-academic profiles (e.g. admin staff). When a user is marked as Academic, Elements is set to automatically retrieve their publication data from external sources</p></li>
+<li><p><strong>Student</strong> : Excludes Academic users and any other non-academic profiles (e.g. admin staff)</p></li>
+</ul>
+<p>In some instances, users may be assigned to both these types, or to neither (e.g. admin staff).</p>
+<p>Importing users based on their profile type can be configured to:</p>
+<ul class="simple">
+<li><p>Import <strong>All</strong> users</p></li>
+<li><p>Only import users that are set as <strong>Academic</strong> or <strong>Student</strong></p></li>
+<li><p>Import <strong>Academic</strong> users only</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul>
+<li><p>User status, profile type and privacy level settings work in combination. For example:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If <strong>Current</strong> users and <strong>Academic</strong> users are both selected, only those users that are both current and academic will be imported (as opposed to importing all current users, and in addition all academic users separately)</p></li>
+<li><p>If <strong>Current</strong> users, <strong>Academic</strong> users and the <strong>Public</strong> privacy setting are all selected, only those users that are both current and academic, and marked as Public, will be imported</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Changes to your Explorer for Institutions configuration will trigger a reset and full import of your Elements data. Depending on the size of your institution it may take <strong>several</strong> days to complete.</p></li>
+</ul>
+</div>
+<p>Your Engagement Manager will discuss these configuration options with during onboarding. If you’re an existing Altmetric customer and would like to customize your existing configuration settings please contact <a class="reference external" href="mailto:support&#37;&#52;&#48;altmetric&#46;com">support<span>&#64;</span>altmetric<span>&#46;</span>com</a>.</p>
+</section>
+</section>
+<section id="email-notifications">
+<h3>Email notifications<a class="headerlink" href="#email-notifications" title="Permalink to this heading"></a></h3>
+<p>We provide all our Elements customers with the option to receive an email notification (sent to one or more email addresses) on the completion of an import. If you’d like to be informed once an import has completed please provide your Engagement Manager with the email addresses and we’ll make the necessary configuration changes.</p>
+</section>
+</section>
+<section id="pure">
+<h2>Pure<a class="headerlink" href="#pure" title="Permalink to this heading"></a></h2>
+<p>Altmetric can integrate with Pure in order to set up your institutional edition of Explorer for Institutions, allowing you to view your institution’s publication outputs, authors, and departments within the Explorer. We populate the Explorer for Institutions by linking your set of publications, authors and departments with the scholarly publications already tracked in the Altmetric database.</p>
+<p>Please follow the instructions below to set up your Pure API for Altmetric.</p>
+<section id="administrator-instructions-for-pure">
+<h3>Administrator instructions for Pure<a class="headerlink" href="#administrator-instructions-for-pure" title="Permalink to this heading"></a></h3>
+<section id="allow-access-through-your-firewall">
+<h4>Allow access through your firewall<a class="headerlink" href="#allow-access-through-your-firewall" title="Permalink to this heading"></a></h4>
+<p>If you have a firewall, ensure you have opened a port that would allow our IP addresses to access as detailed below.</p>
+<p><strong>Live:</strong> <code class="docutils literal notranslate"><span class="pre">164.132.63.174</span></code></p>
+<p><strong>Staging:</strong> <code class="docutils literal notranslate"><span class="pre">51.254.16.223</span></code></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Adding both IP ranges to your Pure production instance allows us to test your import via our staging (development) server and then launch on our live server.</p>
+</div>
+</section>
+<section id="create-an-api-key-and-allow-access-to-required-endpoints">
+<h4>Create an API key and allow access to required endpoints<a class="headerlink" href="#create-an-api-key-and-allow-access-to-required-endpoints" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/research-outputs</span></code> - we harvest identifiers associated with your publications from this endpoint, as well as publication-authors and publication-departments associations for each publication</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/persons</span></code> - we harvest author names and author-departments associations from this endpoint</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/organisational-units</span></code> - we harvest department names and parent departments from this endpoint so we can use it to build your departmental hierarchy</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/changes</span></code> - this endpoint alerts us to any creation, update and deletion changes to publications, and update and deletion changes to authors.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If preferred, you can also set up login credentials for Altmetric. Just provide these credentials to your Engagement Manager in a secure way at the same time as the endpoint and API key.</p>
+</div>
+</section>
+<section id="provide-altmetric-with-access-to-your-pure-api-endpoint">
+<h4>Provide Altmetric with access to your Pure API endpoint<a class="headerlink" href="#provide-altmetric-with-access-to-your-pure-api-endpoint" title="Permalink to this heading"></a></h4>
+<p>Once you have enabled access to your API endpoint please securely provide the following information to your Engagement Manager:</p>
+<ul class="simple">
+<li><p>Your Pure API endpoint, e.g., in a format like: <a class="reference external" href="https://pure.university.ac.uk/ws/rest/">https://pure.university.ac.uk/ws/rest/</a></p></li>
+<li><p>An API key with access to all <strong>four</strong> above-named endpoints</p></li>
+<li><p>Login credentials for Altmetric, if required</p></li>
+</ul>
+<p>That’s it! You will hear back from your Engagement Manager about whether or not the connection with your Pure API endpoint was successful.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="send-your-publications-data-via-csv-spreadsheet">
+<h1>Send your publications data via CSV spreadsheet<a class="headerlink" href="#send-your-publications-data-via-csv-spreadsheet" title="Permalink to this heading"></a></h1>
+<p>You can populate Explorer for Institutions via a CSV spreadsheet detailing your author, publications and group/department data. Altmetric require two CSV files to populate your instance:</p>
+<ul class="simple">
+<li><p>A Publications file listing your author names, publication identifiers (e.g. DOIs, PMIDs, etc.) and group/department affiliation for each item</p></li>
+<li><p>An Organizational hierarchy file detailing your groups structure to populate the Departments tab in the Explorer. We create this structure to help you browse sets of publications in groups that make sense for your organization. This might be your university hierarchy or groupings such as open access status; funding award; grant ID; therapeutic area; animal type; health conditions; subjects, etc. The key thing is your groups are relevant to how you would like to report on Altmetric data.</p></li>
+</ul>
+<section id="preparing-your-publications-file">
+<h2>Preparing your publications file<a class="headerlink" href="#preparing-your-publications-file" title="Permalink to this heading"></a></h2>
+<p>At minimum, we will need a file with three columns, containing the information shown below. Here’s an example of the minimum required data in a CSV:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Author</p></th>
+<th class="head"><p>Department</p></th>
+<th class="head"><p>DOI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Carberry, Josiah</p></td>
+<td><p>School of Pottery</p></td>
+<td><p>10.1234/psycer123</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each row of this file should always correspond to:</p>
+<ul class="simple">
+<li><p>Author names (with more than one author name separated by semicolon)</p></li>
+<li><p>Department/groups associated with each publication (with more than one department/group separated by semicolon)</p></li>
+<li><p>Publication identifiers</p></li>
+</ul>
+<p>We use this data to populate publications, authors and department/groups in Explorer for Institutions. Here is a larger sample data set, with multiple IDs per item:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Author</p></th>
+<th class="head"><p>Department</p></th>
+<th class="head"><p>DOI</p></th>
+<th class="head"><p>PMID</p></th>
+<th class="head"><p>arXiv</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Carberry, Josiah</p></td>
+<td><p>School of Pottery</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Carberry, Josiah</p></td>
+<td><p>Department of Biological Sciences</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Carberry, Josiah</p></td>
+<td><p>Department of Biological Sciences</p></td>
+<td><p>10.1234/humkh456</p></td>
+<td><p>65436</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Carberry, Josiah</p></td>
+<td><p>Department of Biological Sciences</p></td>
+<td><p>10.1234/biolog789</p></td>
+<td><p>4567</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Brush, Painter</p></td>
+<td><p>Department of Applied Economics</p></td>
+<td><p>10.1234/painter444</p></td>
+<td><p>12345</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Brush, Painter</p></td>
+<td><p>Department of Applied Economics</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>23467</p></td>
+<td><p>1000.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Science, Simon</p></td>
+<td><p>Department of Theatre and TV Studies</p></td>
+<td><p>10.6574/tv984213</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Smith, John</p></td>
+<td><p>Department of Environmental Sciences</p></td>
+<td><p>10.1234/biolo123</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Thomas, Eve; Jones, Peter; Willis, Sarah</p></td>
+<td><p>Lilliput Urban Cities Research Centre</p></td>
+<td><p>10.9874/hou345</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The author and departmental affiliation(s) should correspond with an individual output. On a single row representing a single research output, you can list multiple authors separated by semicolon in “Lastname, Firstname” format (as seen in the bottom row above).</p>
+<p>Please list each type of identifier in its own column, and don’t mix and match the DOIs and PMIDs (or other types of identifiers) within a single column. You should include both types of identifier whenever possible.</p>
+<p>The department information should match the group names in your hierarchy CSV and not include duplicates.</p>
+<p>A list of supported identifiers can be found in the <a class="reference internal" href="#supported-identifiers"><span class="std std-ref">Supported identifiers</span></a> section.</p>
+</section>
+<section id="providing-group-information-in-your-publications-file-for-organizations-without-a-traditional-hierarchy-structure">
+<h2>Providing group information in your publications file for organizations without a traditional hierarchy structure<a class="headerlink" href="#providing-group-information-in-your-publications-file-for-organizations-without-a-traditional-hierarchy-structure" title="Permalink to this heading"></a></h2>
+<p>You can add multiple sections in your hierarchy if you would like to browse by different categories, e.g. Geography and Therapeutic Area.</p>
+<p>Here is a publications file example for organizations with multiple group types:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Author</p></th>
+<th class="head"><p>DOI</p></th>
+<th class="head"><p>PMID</p></th>
+<th class="head"><p>Geography</p></th>
+<th class="head"><p>Therapeutic Area</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Carberry, Josiah</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>65436</p></td>
+<td><p>United States</p></td>
+<td><p>Hematology</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carberry, Josiah</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>4567</p></td>
+<td><p>United States</p></td>
+<td><p>Hematology</p></td>
+</tr>
+<tr class="row-even"><td><p>Brush, Painter</p></td>
+<td><p>10.1234/painter444</p></td>
+<td><p>12345</p></td>
+<td><p>United States</p></td>
+<td><p>Multiple Sclerosis</p></td>
+</tr>
+<tr class="row-odd"><td><p>Brush, Painter</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>23467</p></td>
+<td><p>United States</p></td>
+<td><p>Multiple Sclerosis</p></td>
+</tr>
+<tr class="row-even"><td><p>Science, Simon</p></td>
+<td><p>10.6574/tv984213</p></td>
+<td></td>
+<td><p>United States</p></td>
+<td><p>Multiple Sclerosis</p></td>
+</tr>
+<tr class="row-odd"><td><p>Smith, John</p></td>
+<td><p>10.1234/biolo123</p></td>
+<td></td>
+<td><p>United States</p></td>
+<td><p>Multiple Sclerosis</p></td>
+</tr>
+</tbody>
+</table>
+<p>In the above example, you can see the file includes multiple identifiers for some items and each output appears in multiple groups. E.g., the first output (DOI: 10.1234/humkh456), also has a PMID of 65436 and is associated with two groups in the departmental hierarchy: United States and Hematology.</p>
+<p>This output will therefore be discoverable via both identifiers and via the <strong>Geography</strong> &gt; <strong>United States</strong> / <strong>Therapeutic Area</strong> &gt; <strong>Hematology group</strong> .</p>
+</section>
+<section id="multiple-co-authors-from-the-same-institution">
+<h2>Multiple co-authors from the same institution<a class="headerlink" href="#multiple-co-authors-from-the-same-institution" title="Permalink to this heading"></a></h2>
+<p>If there are multiple co-authors of the same paper who all belong to the same institution, you can either list each author in a separate row or separate them by semi-colons.</p>
+<p>The authors in your CSV should belong to your institution only; you should not include any co-authors who do not belong to your institution. Example of one article with co-authors from the same institution:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Author</p></th>
+<th class="head"><p>Department</p></th>
+<th class="head"><p>DOI</p></th>
+<th class="head"><p>PMID</p></th>
+<th class="head"><p>arXiv</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Carberry, Josiah</p></td>
+<td><p>School of Pottery</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>23467</p></td>
+<td><p>1000.1000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Brush, Painter</p></td>
+<td><p>School of Painting</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>23467</p></td>
+<td><p>1000.1000</p></td>
+</tr>
+<tr class="row-even"><td><p>Science, Simon</p></td>
+<td><p>School of Biology</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>23467</p></td>
+<td><p>1000.1000</p></td>
+</tr>
+</tbody>
+</table>
+<p>If all authors belong in the same departments, you can add them as shown below:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Author</p></th>
+<th class="head"><p>Department</p></th>
+<th class="head"><p>DOI</p></th>
+<th class="head"><p>PMID</p></th>
+<th class="head"><p>arXiv</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Science, Simon; Brush, Painter; Carberry, Josiah</p></td>
+<td><p>School of Biology; School of Painting; School of Pottery</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>23467</p></td>
+<td><p>1000.1000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If one of the authors, e.g. Simon Science, only works in the School of Biology, they should not be included in the CSV in this way, they should have a separate row, even though it is the for the same paper.</p>
+</div>
+</section>
+<section id="multiple-departmental-affiliations-for-a-publication">
+<h2>Multiple departmental affiliations for a publication<a class="headerlink" href="#multiple-departmental-affiliations-for-a-publication" title="Permalink to this heading"></a></h2>
+<p>If a single publication belongs to multiple departments, please list the departmental affiliations in the same cell and separate the names using semi-colons.</p>
+<p>Example using semi-colons to separate departments:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Author</p></th>
+<th class="head"><p>Department</p></th>
+<th class="head"><p>DOI</p></th>
+<th class="head"><p>PMID</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Carberry, Josiah</p></td>
+<td><p>School of Pottery; School of Painting</p></td>
+<td><p>10.1234/psycer123</p></td>
+<td><p>23467</p></td>
+</tr>
+<tr class="row-odd"><td><p>Science, Simon</p></td>
+<td><p>School of Biology; School of Neuroscience; School of Biochemistry</p></td>
+<td><p>10.1234/biolo123</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="organizational-hierarchy-building-your-departments-groups-structure">
+<h2>Organizational hierarchy: building your departments/groups structure<a class="headerlink" href="#organizational-hierarchy-building-your-departments-groups-structure" title="Permalink to this heading"></a></h2>
+<p>In order to browse your data by department or group, you will need to provide the structure of your departments/groups in a separate spreadsheet. Each level in the hierarchy should be listed in a separate column. This creates a section in the Explorer <em>Departments</em> view. A Level 1 group will be a new section, with its Level 2 groups associated as children. Column A should always contain the name of your organization - a <em>Top Level</em> department which won’t appear in the Explorer. See below for examples in Explorer for Institutions and as CSV spreadsheets. Please note: the department names must match the group names in your publications spreadsheet and not include duplicates.</p>
+<ol class="loweralpha simple">
+<li><p><strong>University/research institution hierarchy example</strong> Here’s an example of a university departmental hierarchy in Explorer for Institutions:</p></li>
+</ol>
+<img alt="Example of an institutions departmental hierarchy showing the department of humanities and the department of life sciences" src="_images/Institution-EFI.png" />
+<p>Here’s how this hierarchy is structured in the CSV spreadsheet:</p>
+<img alt="The institutional CSV file is split into three columns, top level (the name of the institution), level 1 (faculty level) and level 2 (department level)" src="_images/example-csv-screenshot-institution.png" />
+<ol class="loweralpha simple" start="2">
+<li><p><strong>Funder hierarchy example</strong> Here’s an example of a funder departmental hierarchy in Explorer for Institutions:</p></li>
+</ol>
+<img alt="Example of a funder departmental hierarchy showing groupings by institutes and signature initiatives" src="_images/Funder-EFI.png" />
+<p>Here’s how this hierarchy is structured in the CSV spreadsheet (with parent departments bolded for emphasis):</p>
+<img alt="The institutional CSV file is split into three columns, top level (the name of the funder), level 1 (funding area) and level 2 (research type)" src="_images/example-csv-screenshot-funder.png" />
+<ol class="loweralpha simple" start="3">
+<li><p><strong>Pharmaceutical hierarchy example</strong> Here’s an example of a pharmaceutical departmental hierarchy in Explorer for Institutions:</p></li>
+</ol>
+<img alt="Example of a pharmaceutical departmental hierarchy showing groupings by geography and therapeutic area" src="_images/Pharma-EFI.png" />
+<p>Here’s how this hierarchy is structured in the CSV spreadsheet:</p>
+<img alt="The pharmaceutical CSV file is split into three columns, top level (the name of the pharmaceutical), level 1 (grouping) and level 2 (therapeutic area)" src="_images/example-csv-screenshot-pharma.png" />
+</section>
+<section id="supported-identifiers">
+<h2>Supported identifiers<a class="headerlink" href="#supported-identifiers" title="Permalink to this heading"></a></h2>
+<p>Explorer for Institutions supports the following unique identifiers via CSV import:</p>
+<ul class="simple">
+<li><p>DOI</p></li>
+<li><p>PubMed ID</p></li>
+<li><p>NCT ID</p></li>
+<li><p>RePeC ID</p></li>
+<li><p>arXiv ID</p></li>
+<li><p>ADS Bibcode</p></li>
+<li><p>Handle</p></li>
+<li><p>URN</p></li>
+<li><p>ISBN</p></li>
+<li><p>URI (custom service for supported domains only)</p></li>
+</ul>
+<p>For each identifier type you want to use, please ensure that each of those types is listed in its own column.</p>
+</section>
+<section id="final-steps">
+<h2>Final steps<a class="headerlink" href="#final-steps" title="Permalink to this heading"></a></h2>
+<p>As soon as your data file is complete send it to your Engagement Manager. Check you have included the following:</p>
+<ul class="simple">
+<li><p>Publications CSV file</p></li>
+<li><p>Groups CSV file</p></li>
+</ul>
+<p>Please use the instructions above to prepare your data and let us know if you have any questions. We will be happy to check this data for you and let you know if there are any issues, before walking you through how to upload the CSVs to your instance.</p>
+</section>
+<section id="keeping-your-data-up-to-date-via-spreadsheet">
+<h2>Keeping your data up-to-date via spreadsheet<a class="headerlink" href="#keeping-your-data-up-to-date-via-spreadsheet" title="Permalink to this heading"></a></h2>
+<p>Using the CSV uploader tool, one or more administrators at your organization can maintain the data integration by uploading new CSVs each time you wish to add, remove, or alter publications or departments.
+During the implementation process, we will establish who at your organization will be designated as an administrator; they will have access to the CSV tool and the administrator’s panel. Training will
+be provided for any individuals who are designated administrators.</p>
+<p>Documentation about the CSV tool can be found in the Support Portal <a class="reference external" href="https://help.altmetric.com/support/solutions/articles/6000240718-csv-uploader-tool-preparing-the-data">here</a>.</p>
+</section>
+</section>
+<section id="harvesting-from-your-repository-oai-pmh-feed">
+<h1>Harvesting from your repository OAI-PMH feed<a class="headerlink" href="#harvesting-from-your-repository-oai-pmh-feed" title="Permalink to this heading"></a></h1>
+<p>If your institution uses an institutional repository with an OAI-PMH feed, e.g. EPrints, DSpace or bepress, Altmetric can populate your instance of Explorer for Institutions using your repository data. This enables us to import your institutional authors, groups and organizational hierarchy from your institutional repository to Explorer for Institutions, and update your data automatically.</p>
+<p>If you have a non-traditional structure to your institutional hierarchy please read this additional <a class="reference external" href="https://help.altmetric.com/a/solutions/articles/6000258260?portalId=6000060531">information</a>.</p>
+<section id="preparing-your-repository-for-an-efi-integration">
+<h2>Preparing your repository for an EFI integration<a class="headerlink" href="#preparing-your-repository-for-an-efi-integration" title="Permalink to this heading"></a></h2>
+<p>A number of metadata fields should be exposed via your OAI-PMH feed in order for Altmetric to collect all the relevant data from your repository and populate EFI. Instructions are detailed below.</p>
+<section id="provide-your-oai-pmh-endpoint">
+<h3>Provide your OAI-PMH endpoint<a class="headerlink" href="#provide-your-oai-pmh-endpoint" title="Permalink to this heading"></a></h3>
+<p>Firstly, we need the base URL for your repository OAI-PMH endpoint, e.g.: <a class="reference external" href="http://eprints.lse.ac.uk/cgi/oai2">http://eprints.lse.ac.uk/cgi/oai2</a> Altmetric will import your data via this endpoint.</p>
+</section>
+<section id="publications-and-identifiers">
+<h3>Publications and identifiers<a class="headerlink" href="#publications-and-identifiers" title="Permalink to this heading"></a></h3>
+<p>Next, Altmetric will import publications from your OAI-PMH feed, usually via a URL like this: <a class="reference external" href="http://eprints.lse.ac.uk/cgi/oai2?verb=ListRecords&amp;metadataPrefix=oai_dc">http://eprints.lse.ac.uk/cgi/oai2?verb=ListRecords&amp;metadataPrefix=oai_dc</a> Altmetric collects identifiers from the OAI record for each item. Only records that have a supported identifier will be imported so ensure that all of your records have unique persistent identifiers (e.g. DOI, Handle, ISBN), and those identifier fields are available via the OAI-PMH feed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We’re only able to import items with persistent identifiers.</p>
+</div>
+</section>
+<section id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this heading"></a></h3>
+<p>Altmetric needs to know which authors are associated with your institution in order to populate the <strong>Authors</strong> tab in Explorer for Institutions. In order to set this up, you need to expose an institutional author ID via your OAI-PMH feed.</p>
+<p>This could be a unique value for each institutional author, such as an ORCID iD, institutional identifier or email address. See the example below:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;identifier&gt;</span>oai:gala.gre.ac.uk:1<span class="nt">&lt;/identifier&gt;</span>
+    <span class="nt">&lt;datestamp&gt;</span>2016-10-14T08:58:54Z<span class="nt">&lt;/datestamp&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;metadata&gt;</span>
+    <span class="nt">&lt;oai_dc:dc</span> <span class="na">xmlns:oai_dc=</span><span class="s">&quot;http://www.openarchives.org/OAI/2.0/oai_dc/&quot;</span> <span class="na">xmlns:dc=</span><span class="s">&quot;http://purl.org/dc/elements/1.1/&quot;</span> <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.openarchives.org/OAI/2.0/oai_dc/ http: www.openarchives.org OAI 2.0 oai_dc.xsd&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dc:title&gt;</span>A natural extension of the conventional finite volume method into polygonal unstructured meshes for CFD application.<span class="nt">&lt;/dc:title&gt;</span>
+    <span class="nt">&lt;dc:creator</span> <span class="na">id=</span><span class="s">&quot;koulis@glasgow.uk&quot;</span><span class="nt">&gt;</span>Pericleous, Koulis A.<span class="nt">&lt;dc:creator&gt;</span>
+    <span class="nt">&lt;dc:creator</span> <span class="na">id=</span><span class="s">&quot;1234&quot;</span><span class="nt">&gt;</span>Cross, Mark<span class="nt">&lt;dc:creator&gt;</span>
+    <span class="nt">&lt;dc:subject&gt;</span>TA Engineering (General). Civil engineering (General)<span class="nt">&lt;/dc:subject&gt;</span>
+    <span class="nt">&lt;dc:description&gt;</span>A new general cell-centered solution procedure.<span class="nt">&lt;/dc:description&gt;</span>
+    <span class="nt">&lt;dc:publisher&gt;</span>Elsevier<span class="nt">&lt;/dc:publisher&gt;</span>
+    <span class="nt">&lt;dc:date&gt;</span>1996-02<span class="nt">&lt;/dc:date&gt;</span>
+    <span class="nt">&lt;dc:type&gt;</span>Article<span class="nt">&lt;/dc:type&gt;</span>
+    <span class="nt">&lt;dc:type&gt;</span>PeerReviewed<span class="nt">&lt;/dc:type&gt;</span>
+    <span class="nt">&lt;dc:identifier&gt;</span>http://hdl.handle.net/10568/54297<span class="nt">&lt;/dc:identifier&gt;</span>
+  <span class="nt">&lt;/oai_dc:dc&gt;</span>
+<span class="nt">&lt;/metadata&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p>From the source code above, we collect the authors from the <code class="docutils literal notranslate"><span class="pre">dc:creator</span></code> tags:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dc:creator</span> <span class="na">id=</span><span class="s">&quot;koulis@glasgow.uk&quot;</span><span class="nt">&gt;</span>Pericleous, Koulis A.<span class="nt">&lt;/dc:creator&gt;</span>
+<span class="nt">&lt;dc:creator</span> <span class="na">id=</span><span class="s">&quot;1234&quot;</span><span class="nt">&gt;</span>Cross, Mark<span class="nt">&lt;/dc:creator&gt;</span>
+</pre></div>
+</div>
+<p>The unique <code class="docutils literal notranslate"><span class="pre">id</span></code> for the first institutional author would be “<a class="reference external" href="mailto:koulis&#37;&#52;&#48;glasgow&#46;uk">koulis<span>&#64;</span>glasgow<span>&#46;</span>uk</a>”, and for the second author it would be “1234”. This enables searching for these authors in the Explorer for Institutions view.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Harvesting authors based on institutional affiliation is only available for certain OAI-MPH feeds / metadata prefixes - for further information please contact Support who will be happy to discuss this with you.</p>
+</div>
+</section>
+<section id="hierarchy">
+<h3>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this heading"></a></h3>
+<p>Altmetric recreates your organizational hierarchy from your institutional repository in order to populate the Departments tab in Explorer for Institutions. Groups should be available in the OAI-PMH feed, as detailed in the <code class="docutils literal notranslate"><span class="pre">ListSets</span></code> example below: <a class="reference external" href="http://eprints.lse.ac.uk/cgi/oai2?verb=ListSets">http://eprints.lse.ac.uk/cgi/oai2?verb=ListSets</a>.</p>
+<p>The sets created should replicate your browse by <strong>Division/Group/Faculty</strong> view in the front end of your repository.</p>
+<section id="diva-portal">
+<h4>DiVA Portal<a class="headerlink" href="#diva-portal" title="Permalink to this heading"></a></h4>
+<p>If you are a DiVA Portal customer and are using our OAI-PMH integration with the <code class="docutils literal notranslate"><span class="pre">swepub_mods</span></code> metadata prefix we’re able to offer you a number of ways to customize how departments are displayed within your Explorer for Institutions.</p>
+<ul class="simple">
+<li><p><strong>Translations/renaming</strong> - It might be that you want to translate your department names from Swedish to English or simplify certain department names so that they’re more easily identifiable for users.</p></li>
+<li><p><strong>Map papers to other departments</strong> - It might be that your repository hierarchy is out of date or your institution has gone through a number of changes over the years and departments have merged or you want to simplify reporting.</p></li>
+</ul>
+<p>If either of these requirements are something that you’re interested in you can read more about translating/renaming departments <a class="reference external" href="https://help.altmetric.com/a/solutions/articles/6000261793?portalId=6000060531">here</a> and re-mapping papers <a class="reference external" href="https://help.altmetric.com/a/solutions/articles/6000261794?portalId=6000060531">here</a>.</p>
+<p>We are also able to filter out specific record types based on their <code class="docutils literal notranslate"><span class="pre">setSpec</span></code>, for example as part of the synchronization process we’re able to exclude all records that have the name <code class="docutils literal notranslate"><span class="pre">studentThesis</span></code>.</p>
+</section>
+<section id="haplo">
+<h4>Haplo<a class="headerlink" href="#haplo" title="Permalink to this heading"></a></h4>
+<p>If you use Haplo for your repository then our integration will be configured to use the <code class="docutils literal notranslate"><span class="pre">oai_datacite</span></code> metadata prefix. This will enable us to specifically import authors that are affiliated with your institution.</p>
+</section>
+<section id="dspace">
+<h4>DSpace<a class="headerlink" href="#dspace" title="Permalink to this heading"></a></h4>
+<p>If you use DSpace for your repository then you will need to ensure that the <code class="docutils literal notranslate"><span class="pre">api/hierarchy</span></code> endpoint is enabled as we build your hierarchical structure using this data and not from <code class="docutils literal notranslate"><span class="pre">ListSets</span></code> .</p>
+<p>If you are unable to enable this endpoint we are able to offer a departmentless integration as an alternative.</p>
+</section>
+<section id="esploro">
+<h4>Esploro<a class="headerlink" href="#esploro" title="Permalink to this heading"></a></h4>
+<p>Esploro requires that a <code class="docutils literal notranslate"><span class="pre">setSpec</span></code> is always provided when harvesting records from your repository. This means that in order to sync over your research outputs and to replicate your departmental structure within your Explorer for Institutions you will need to create publishing profiles for each department. If you are unable to to do this then we are able to offer a departmentless integration as an alternative.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you require a departmentless instance then because of the selective harvesting requirement  - a single publishing profile would still be required.</p>
+</div>
+<p>The Esploro repository also exposes a number of other profiles via <code class="docutils literal notranslate"><span class="pre">ListSets</span></code>, for example <strong>BrowZine</strong> and <strong>Unpaywall</strong> . To exclude these from appearing within your Explorer for Institutions you would be required to prefix the <code class="docutils literal notranslate"><span class="pre">setName</span></code> of all publishing profiles you <strong>do</strong> want to see with <code class="docutils literal notranslate"><span class="pre">Department</span> <span class="pre">=</span></code> as in the example below.</p>
+<p>To have a department for the <strong>Faculty of Science</strong> for which there is a dependent department <strong>School of Biology</strong> - you will need a publishing profile for each which would result in the following <code class="docutils literal notranslate"><span class="pre">ListSet</span></code> records.
+Because of the filtering applied using <code class="docutils literal notranslate"><span class="pre">Department</span> <span class="pre">=</span></code> the <strong>BrowZine</strong> wouldn’t be synch’d.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ListSets&gt;</span>
+  <span class="nt">&lt;set&gt;</span>
+    <span class="nt">&lt;setSpec&gt;</span>Faculty of Science<span class="nt">&lt;/setSpec&gt;</span>
+    <span class="nt">&lt;setName&gt;</span>Department = Faculty of Science<span class="nt">&lt;/setName&gt;</span>
+  <span class="nt">&lt;/set&gt;</span>
+  <span class="nt">&lt;set&gt;</span>
+    <span class="nt">&lt;setSpec&gt;</span>Faculty of Science:School of Biology<span class="nt">&lt;/setSpec&gt;</span>
+    <span class="nt">&lt;setName&gt;</span>Department = School of Biology<span class="nt">&lt;/setName&gt;</span>
+  <span class="nt">&lt;/set&gt;</span>
+  <span class="nt">&lt;set&gt;</span>
+    <span class="nt">&lt;setSpec&gt;</span>BrowZine<span class="nt">&lt;/setSpec&gt;</span>
+    <span class="nt">&lt;setName&gt;</span>BrowZine<span class="nt">&lt;/setName&gt;</span>
+  <span class="nt">&lt;/set&gt;</span>
+<span class="nt">&lt;/ListSets&gt;</span>
+</pre></div>
+</div>
+<p>This would result in the following structure within the Explorer.</p>
+<img alt="Example of Esploro departmental hierarchy showing the school of biology sitting under the faculty of science" src="_images/esploro-departments.png" />
+</section>
+</section>
+<section id="next-steps">
+<h3>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h3>
+<p>Please ensure you have completed steps the above. When all changes are in place and the new fields are accessible via your institutional repository OAI-PMH feed, Altmetric are able to begin your Explorer for Institutions implementation. During the implementation, we’ll initially run a full import of your repository data and set up weekly automatic updates to import new/modified items.</p>
+</section>
+</section>
+</section>
+<section id="frequently-asked-questions">
+<h1>Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading"></a></h1>
+<section id="what-happens-after-my-data-are-imported-into-efi">
+<h2>What happens after my data are imported into Explorer for Institutions?<a class="headerlink" href="#what-happens-after-my-data-are-imported-into-efi" title="Permalink to this heading"></a></h2>
+<p>After Altmetric connects with your system for the first time, an initial mass import of all your authors, publications, departments, etc. will be carried out. The authors, departments, and organizational hierarchy information will be used to populate the <strong>Authors</strong> and <strong>Departments</strong> tabs that can be found in <strong>My institution</strong>.</p>
+<p>Using the publications data you have supplied, Altmetric will retrieve any attention data it has stored in association with these particular publications. Thus, attention data for all scholarly articles in your
+institution will be automatically supplied once the connection is made. There is no further work required from you once you have provided Altmetric with access.</p>
+</section>
+<section id="do-lists-of-authors-publications-and-groups-altmetric-stay-in-sync">
+<h2>Do lists of authors, publications, and groups Altmetric stay in sync?<a class="headerlink" href="#do-lists-of-authors-publications-and-groups-altmetric-stay-in-sync" title="Permalink to this heading"></a></h2>
+<p>Yes. All of the relevant data that Altmetric retrieves from your system are synced with Explorer for Institutions on a regular basis. Updates or deletions of authors, publications or groups, etc. in your system will subsequently be reflected in Explorer for Institutions after its latest sync.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="securing-access-to-your-efi.html" class="btn btn-neutral float-left" title="Access and authentication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="support-and-training.html" class="btn btn-neutral float-right" title="Getting the most out of your subscription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Altmetric LLC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #1a3d74;
+    }
+  </style>
+  <script>golden_kestrel.core.init();</script>
+
+
+</body>
+</html>
